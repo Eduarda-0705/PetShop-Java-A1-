@@ -47,4 +47,4 @@ Os dados do Pet e Cliente são salvos em arquivos .txt
 
 O trabalho foi deselvolvido em dupla
 - Maria Eduarda Rosa da Costa
-- Maurico Martins de Castro Regnel
+- Mauricio Martins de Castro Regnel
