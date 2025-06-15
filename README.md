@@ -16,7 +16,7 @@ O projeto foi dividido da seguinte forma:
 - Model: Contém as classes principais do sistema:
 - Cliente: Representa o tutor. Contém nome, CPF e telefone.
 - Pet: Representa o animal. Cada pet tem nome, raça, idade e um tutor (associação com Cliente).
-- Servico: É uma classe abstrata que representa um serviço genérico. As subclasses ServicoBanho e ServicoHigienico herdam dela e implementam a interface ServicoPet.
+- Servico: É uma classe abstrata que representa um serviço genérico. Ela tem um método abstract getDuracaoEstimada();.  As subclasses ServicoBanho e ServicoHigienico herdam dela e implementam a interface ServicoPet.
 - ServicoPet (interface): Define os métodos getDescricao() e getPrecoServico(), utilizados para aplicar polimorfismo.
 
 - Controller: Contém os gerenciadores responsáveis por controlar os dados
@@ -47,7 +47,7 @@ Relações utilizadas:
 2 - Banho simples
 3 - Tosa Higiênica
 - Basta digitar o número correspondente ao tipo de serviço desejado.
-- Também é possível remover um cliente. Ao remover um cliente, o pet associado a ele também será removido automaticamente.
+- Também é possível remover um cliente. Ao remover um cliente, o pet associado a ele também será removido.
 - Para encerrar o sistema, basta digitar 0 no menu principal.
 - os dados de Clientes e Pets são salvos automaticamente em arquivos .txt, garantindo a persistência das informações entre as execuções do programa.
 
