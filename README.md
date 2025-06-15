@@ -33,9 +33,23 @@ Relações utilizadas:
 - Agregação: As listas de Cliente e Pet nos gerenciadores (GerenciadorClientes e GerenciadorPets) representam agregações, já que os objetos podem existir independentemente fora dessas estruturas.
 
 ## Como executar o projeto.
-- Para executar o projeto, basta abrir o diretório no VS Code com suporte a Java, compilar a classe Principal.java no pacote view e utilizar o menu via console.
-- O sistema permite cadastrar clientes, cadastrar pets associados ao cliente, listar os dados, registrar um serviço e remover um cliente que junto remove o pet associado a um cliente. Você só pode cadastrar um Pet se tiver um CPF de um tutor válido, e ao encolher um serviço o seu Pet tem que estar cadastrado. 
-Os dados do Pet e Cliente são salvos em arquivos .txt
+- Para executar o projeto, basta abrir o diretório no VS Code com suporte a Java, compilar a classe Principal.java que está no pacote view e utilizar o menu via console.
+  
+- O sistema funciona por meio de um menu interativo e permite as seguintes operações:
+- Primeiro, você deve cadastrar um cliente.
+- Em seguida, é possível cadastrar um pet, que deve estar associado a um cliente já existente (ou seja, só é possível cadastrar um pet se o CPF do tutor já estiver cadastrado).
+- Você pode listar todos os clientes cadastrados.
+- Você pode também listar os pets relacionados a um cliente específico.
+- É possível registrar um serviço para um pet, desde que o pet já esteja cadastrado.
+
+- Os serviços disponíveis são:
+1 - Banho com tosa completa
+2 - Banho simples
+3 - Tosa Higiênica
+- Basta digitar o número correspondente ao tipo de serviço desejado.
+- Também é possível remover um cliente. Ao remover um cliente, o pet associado a ele também será removido automaticamente.
+- Para encerrar o sistema, basta digitar 0 no menu principal.
+- os dados de Clientes e Pets são salvos automaticamente em arquivos .txt, garantindo a persistência das informações entre as execuções do programa.
 
 ## Uso do ChatGpt
 - O Chat foi utilizado para análise dos erros e códigos que não estávamos conseguindo aplicar corretamente, como por exemplo no case 5, de registrar o serviço para o pet, onde foi utilizado um laço de repetição para as escolhas do serviço.
