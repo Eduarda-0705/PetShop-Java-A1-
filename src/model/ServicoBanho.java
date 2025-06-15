@@ -23,6 +23,12 @@ public class ServicoBanho extends Servico implements ServicoPet{
         return tosaCompleta ? 75.99 : 50.00;
     }
 
+    @Override
+    public int getDuracaoEstimada() {
+    return tosaCompleta ? 60 : 45; 
+    }
+
+
 
     @Override
     public String toString() {

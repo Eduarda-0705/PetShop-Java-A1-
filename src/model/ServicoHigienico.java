@@ -15,8 +15,14 @@ public class ServicoHigienico extends Servico implements ServicoPet {
 
     @Override
     public double getPrecoServico() {
-        return 60.0;
+        return 50.0;
     }
+
+    @Override
+    public int getDuracaoEstimada() {
+    return 50; 
+       }
+
 
     @Override
     public String toString() {

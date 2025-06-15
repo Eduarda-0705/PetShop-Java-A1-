@@ -26,6 +26,8 @@ public abstract class Servico {
         this.pet = pet;
     }
 
+    public abstract int getDuracaoEstimada();
+
     @Override
     public String toString() {
         return "Tipo Serviço" + tipo +

@@ -28,7 +28,7 @@ public class GerenciadorPets {
 
         for (Pet p : pets) {
 
-            if(p.getTutor().getCpf().equals(cpf))
+            if(p.getTutor() != null && p.getTutor().getCpf().equals(cpf))
             resultado.add(p);
             
         }
@@ -50,7 +50,7 @@ public class GerenciadorPets {
 
     // Remover Pet do Cliente
     public void removerPetCliente(String cpf) {
-        pets.removeIf(p ->  p.getTutor().getCpf().equals(cpf));
+        pets.removeIf(p ->  p.getTutor()  != null && p.getTutor().getCpf().equals(cpf));
     }
 
 

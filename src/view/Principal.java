@@ -4,6 +4,7 @@ import controller.GerenciadorClientes;
 import controller.GerenciadorPets;
 import model.Cliente;
 import model.Pet;
+import model.Servico;
 import model.ServicoBanho;
 import model.ServicoHigienico;
 import model.ServicoPet;
@@ -22,6 +23,7 @@ public class Principal {
 
         ListaClientes.carregar();
         ListaPets.carregar(ListaClientes);
+
 
         do {
 
@@ -135,6 +137,7 @@ public class Principal {
                        System.out.println("\nServiço registrado para " + pet.getNome() + ": ");
                         System.out.println("Descrição: " + servico.getDescricao());
                         System.out.println("Preço: R$" + servico.getPrecoServico());
+                        System.out.println("Duração Estimada: " + ((Servico) servico).getDuracaoEstimada() + " minutos");
                 }
 
 

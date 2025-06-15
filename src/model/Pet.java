@@ -51,6 +51,9 @@ public  class Pet {
 
     // Para o txt
     public String toText() {
+        if (tutor == null) {
+        return nome + ";" + raca + ";" + idade + ";" + "sem-tutor";
+    }
         return nome + ";" + raca + ";" + idade + ";" + tutor.getCpf();
     }
 
@@ -59,7 +62,13 @@ public  class Pet {
         String nome = partes[0];
         String raca = partes[1];
         int idade = Integer.parseInt(partes[2]);
-        Cliente tutor = ListaClientes.buscarClientePorCPF(partes[3]);
+        String cpfTutor = partes[3];
+        Cliente tutor = ListaClientes.buscarClientePorCPF(cpfTutor);
+
+        if (tutor == null) {
+        System.out.println(" Tutor com CPF " + cpfTutor + " não encontrado no carregamento.");
+    }
+    
         return new Pet(nome, idade, raca, tutor);
         
     }
